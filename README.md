@@ -11,7 +11,7 @@ Funcionalidades a Modelar
 3. Navegador na Internet
     - Métodos: `exibirPagina(String url)`, `adicionarNovaAba()`, `atualizarPagina()`
 
-## Diagrama (Mermaid)
+## 📌 Diagrama (Mermaid)
 
 ```mermaid
 classDiagram
@@ -44,13 +44,14 @@ classDiagram
 
 ## 🧱 Ferramentas utilizadas
 
-- Visual Studio Code
-- [Draw IO](https://www.drawio.com/) - UML
+- `Mermaid`
+- `Visual Studio Code`
 
 ## 🛠️ Links úteis
 
 - [DIO](https://www.dio.me/)
 - [Repositório do desafio](https://github.com/digitalinnovationone/trilha-java-basico/tree/main/desafios/poo)
+- [Documentação Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
 ## 🧑🏻‍💻 Autor
 
