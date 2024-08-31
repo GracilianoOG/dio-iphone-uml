@@ -15,6 +15,8 @@ Funcionalidades a Modelar
 
 ```mermaid
 classDiagram
+    direction TB
+
     class iPhone {
 
     }
@@ -63,6 +65,57 @@ classDiagram
 - [DIO](https://www.dio.me/)
 - [Repositório do desafio](https://github.com/digitalinnovationone/trilha-java-basico/tree/main/desafios/poo)
 - [Documentação Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+- [Direções com Mermaid](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/)
+
+## 📓 Anotações
+
+### Associação simples (agregação por padrão)
+
+Um candidato pode possuir um ou mais telefones, mas não é dependente de um telefone em sua criação.
+
+```mermaid
+    classDiagram
+        direction LR
+        class Candidato {
+        }
+
+        class Telefone {
+        }
+
+        Candidato --> "1..*" Telefone
+```
+
+### Agregação
+
+Um candidato pode ter uma profissão, mas não é obrigatório em sua criação. É possível informar isso em um outro momento.
+
+```mermaid
+    classDiagram
+        direction LR
+        class Candidato {
+        }
+
+        class Profissao {
+        }
+
+        Candidato --o Profissao
+```
+
+### Composição
+
+Um item de menu **deve** ter um produto vinculado para que possa fazer sentido, logo, é obrigatório.
+
+```mermaid
+    classDiagram
+        direction LR
+        class ItemMenu {
+        }
+
+        class Produto {
+        }
+
+        ItemMenu --* Produto
+```
 
 ## 🧑🏻‍💻 Autor
 
