@@ -71,7 +71,7 @@ classDiagram
 
 ### Associação simples (agregação por padrão)
 
-Um candidato pode possuir um ou mais telefones, mas não é dependente de um telefone em sua criação.
+Um candidato pode possuir um ou mais telefones, mas não é dependente de um telefone em sua criação. Essa é uma forma mais simples de representação.
 
 ```mermaid
     classDiagram
@@ -82,12 +82,12 @@ Um candidato pode possuir um ou mais telefones, mas não é dependente de um tel
         class Telefone {
         }
 
-        Candidato --> "1..*" Telefone
+        Candidato --> "1..*" Telefone : tem
 ```
 
 ### Agregação
 
-Um candidato pode ter uma profissão, mas não é obrigatório em sua criação. É possível informar isso em um outro momento.
+Um candidato pode ter uma profissão, mas não é obrigatório em sua criação. É possível informar isso em um outro momento. Um podem existir sem a necessidade do outro ser criado. A destruição de um não afeta o outro.
 
 ```mermaid
     classDiagram
@@ -98,23 +98,23 @@ Um candidato pode ter uma profissão, mas não é obrigatório em sua criação.
         class Profissao {
         }
 
-        Candidato --o Profissao
+        Candidato o--> Profissao : tem
 ```
 
 ### Composição
 
-Um item de menu **deve** ter um produto vinculado para que possa fazer sentido, logo, é obrigatório.
+Uma casa (todo) é composta por um ou mais quartos (partes). Os quartos só podem existir dentro da Casa. A destruição da casa resulta também na destruição dos quartos.
 
 ```mermaid
     classDiagram
         direction LR
-        class ItemMenu {
+        class Casa {
         }
 
-        class Produto {
+        class Quarto {
         }
 
-        ItemMenu --* Produto
+        Casa "1" *--> "1..*" Quarto : possui
 ```
 
 ## 🧑🏻‍💻 Autor
