@@ -11,6 +11,37 @@ Funcionalidades a Modelar
 3. Navegador na Internet
     - Métodos: `exibirPagina(String url)`, `adicionarNovaAba()`, `atualizarPagina()`
 
+## Diagrama (Mermaid)
+
+```mermaid
+classDiagram
+    class iPhone {
+
+    }
+
+    class ReprodutorMusical {
+        +tocar() void
+        +pausar() void
+        +selecionarMusica(musica : String) void
+    }
+
+    class AparelhoTelefonico {
+        +ligar() void
+        +atender() void
+        +iniciarCorreioVoz() void
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(url : String) void
+        +adicionarNovaAba() void
+        +atualizarPagina() void
+    }
+
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorInternet
+```
+
 ## 🧱 Ferramentas utilizadas
 
 - Visual Studio Code
