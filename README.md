@@ -20,21 +20,32 @@ classDiagram
     }
 
     class ReprodutorMusical {
-        +tocar() void
-        +pausar() void
-        +selecionarMusica(musica : String) void
+        -boolean estaTocando
+        -int volume
+        -String musicaAtual
+        +void tocar()
+        +void pausar()
+        +void aumentarVolume()
+        +void diminuirVolume()
+        +void mudarVolume(int volume)
+        +void selecionarMusica(String musica)
+        +void exibirMusicaAtual()
     }
 
     class AparelhoTelefonico {
-        +ligar() void
-        +atender() void
-        +iniciarCorreioVoz() void
+        -boolean emLigacao
+        -boolean estaTocando
+        +void ligar(String numero)
+        +void desligar()
+        +void atender()
+        +void recusar()
+        +void iniciarCorreioVoz()
     }
 
     class NavegadorInternet {
-        +exibirPagina(url : String) void
-        +adicionarNovaAba() void
-        +atualizarPagina() void
+        +void exibirPagina(String url)
+        +void adicionarNovaAba()
+        +void atualizarPagina()
     }
 
     iPhone --> ReprodutorMusical
