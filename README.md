@@ -24,19 +24,25 @@ classDiagram
     class ReprodutorMusical {
         -boolean estaTocando
         -int volume
-        -String musicaAtual
+        -Musica musicaAtual
+        -List~Musica~ listaMusicas
+
         +void tocar()
         +void pausar()
+        +void continuar()
         +void aumentarVolume()
         +void diminuirVolume()
         +void mudarVolume(int volume)
-        +void selecionarMusica(String musica)
+        +void adicionarMusica(Musica musica)
+        +void deletarMusica(String titulo)
+        +void selecionarMusica(String titulo)
         +void exibirMusicaAtual()
     }
 
     class AparelhoTelefonico {
         -boolean emLigacao
         -boolean estaTocando
+
         +void ligar(String numero)
         +void desligar()
         +void atender()
@@ -50,9 +56,16 @@ classDiagram
         +void atualizarPagina()
     }
 
+    class Musica {
+        -String titulo
+        -String artista
+        -int duracao
+    }
+
     iPhone --> ReprodutorMusical
     iPhone --> AparelhoTelefonico
     iPhone --> NavegadorInternet
+    ReprodutorMusical --> Musica : tem
 ```
 
 ## 🧱 Ferramentas utilizadas
