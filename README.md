@@ -36,6 +36,7 @@ classDiagram
         +void adicionarMusica(Musica musica)
         +void deletarMusica(String titulo)
         +void selecionarMusica(String titulo)
+        +void exibirMusicas()
         +void exibirMusicaAtual()
     }
 
