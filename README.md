@@ -50,6 +50,7 @@ classDiagram
         +void recusar()
         +void adicionarContato(Contato contato)
         +void deletarContato(String numero)
+        +void exibirContatos()
         +void iniciarCorreioVoz()
     }
 
