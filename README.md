@@ -1,5 +1,9 @@
 # 💻 Desafio: POO
 
+## 📖 Descrição
+
+Desafio da Digital Innovation One (DIO) com a proposta de modelar e diagramar a representação UML do componente iPhone, abrangendo suas funcionalidades como Reprodutor Musical, Aparelho Telefônico e Navegador na Internet.
+
 ## 🎯 Desafio
 
 Funcionalidades a Modelar
