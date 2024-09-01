@@ -54,9 +54,13 @@ classDiagram
     }
 
     class NavegadorInternet {
+        -Aba abaAtual
+        -List~Aba~ abas
+
         +void exibirPagina(String url)
         +void adicionarNovaAba()
         +void atualizarPagina()
+        +void exibirAbas()
     }
 
     class Musica {
@@ -71,11 +75,17 @@ classDiagram
         -List~String~ telefones
     }
 
+    class Aba {
+        -String titulo
+        -String url
+    }
+
     iPhone --> ReprodutorMusical
     iPhone --> AparelhoTelefonico
     iPhone --> NavegadorInternet
     ReprodutorMusical --> Musica : tem
     AparelhoTelefonico --> Contato : tem
+    NavegadorInternet --> Aba : tem
 ```
 
 ## 🧱 Ferramentas utilizadas
