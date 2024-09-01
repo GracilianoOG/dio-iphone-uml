@@ -42,11 +42,14 @@ classDiagram
     class AparelhoTelefonico {
         -boolean emLigacao
         -boolean estaTocando
+        -List~Contato~ contatos
 
         +void ligar(String numero)
         +void desligar()
         +void atender()
         +void recusar()
+        +void adicionarContato(Contato contato)
+        +void deletarContato(String numero)
         +void iniciarCorreioVoz()
     }
 
@@ -62,10 +65,17 @@ classDiagram
         -int duracao
     }
 
+    class Contato {
+        -String nome
+        -String email
+        -List~String~ telefones
+    }
+
     iPhone --> ReprodutorMusical
     iPhone --> AparelhoTelefonico
     iPhone --> NavegadorInternet
     ReprodutorMusical --> Musica : tem
+    AparelhoTelefonico --> Contato : tem
 ```
 
 ## 🧱 Ferramentas utilizadas
